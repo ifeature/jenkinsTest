@@ -1,0 +1,10 @@
+@array: one two three;
+
+.cycle(@n) when (@n > 0) {
+	h@{n} {
+		font-size: 20px + @n;
+	}
+	.cycle(@n - 1);
+}
+
+.cycle(length(@array));
